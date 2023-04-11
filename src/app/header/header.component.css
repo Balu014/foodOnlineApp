@@ -1,0 +1,72 @@
+.container-fluid{padding: 0px;}
+.navbar{width: 100%;display: inline-flex;justify-content: space-between;}
+.Brand{color: #fff; font-style: italic; font-size: 20px; margin-left: 20px;margin-top: 17px;}
+.Brand span{color: rgb(204, 135, 7);}
+.navbar-collapse{flex-grow: 0;}
+.header{ margin-right: 50px;}
+.badge{ background: #fff; color: #000; border-radius: 50%; width: 20px; font-size: 10px;  }
+.mode{cursor: pointer; background:none; border: none; margin-top: 6px }
+.mode i{font-weight: bolder;}
+.mode:focus{box-shadow: none;}
+.iconshow{display: block;}
+.iconhide{display: none;}
+
+
+.wrapper{
+    display: flex;
+  }
+  .wrapper .static-txt{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: -24px !important;
+    height: 57px;
+    line-height: 75px;
+    overflow: hidden;
+    margin-top: -29px !important;
+  }
+  .dynamic-txts li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  @keyframes slide {
+    100%{
+      top: -360px;
+    }
+  }
+  .dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+    color: #FFF !important;
+  }
+  .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #343F4F;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+
+@media(max-width: 600px){
+    .header{ text-align: center;}
+    .mode{ margin-top: -3px }
+}
